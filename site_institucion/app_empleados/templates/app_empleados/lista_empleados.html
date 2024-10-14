@@ -1,11 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de empleados</title>
-</head>
-<body>
-
-</body>
+<!DOCTYPE html>  
+<html lang="es">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Lista de Empleados</title>  
+    <!-- Bootstrap CSS CDN -->  
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">  
+</head>  
+<body>  
+    <div class="container mt-5">  
+        <h1 class="text-center">Lista de Empleados</h1>  
+        <ul class="list-group">  
+            {% for nombre in empleados %}  
+                <li class="list-group-item d-flex justify-content-between align-items-center">  
+                    {{ nombre }}  
+                    <span class="badge badge-primary badge-pill">Detalles</span>  
+                </li>  
+            {% endfor %}  
+        </ul>  
+    </div>  
+</body>  
 </html>
